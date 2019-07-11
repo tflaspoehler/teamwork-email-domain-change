@@ -1,5 +1,5 @@
 # Working with Python to Access a TeamWork Account
-## Intro
+## intro
 The [TeamWork API](https://developer.teamwork.com/projects/introduction) ([https://www.teamwork.com](https://www.teamwork.com)) gives uses access to most features of teamwork assuming you have access and an API key.
 
 ## teamwork.py
