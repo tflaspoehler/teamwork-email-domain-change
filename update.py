@@ -28,6 +28,6 @@ for person in team.people:
         print " ...                         to " + email
         changes = {"person": {"email-address": email}}
         user = "people/" + uid  + ".json"
-        ## amc.put(user, changes)
+        amc.put(user, changes)
 # =================================== #
 
