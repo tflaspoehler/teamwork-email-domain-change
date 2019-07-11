@@ -9,11 +9,11 @@ from teamwork import *
 
 subdomain = "imcmanager"
 api_key = "enter you API-KEY here"
-imc = teamwork(subdomain, api_key)
+team = teamwork(subdomain, api_key)
 ```
 This will print out the different `GET` calls that are made to get your account information. Now we can loop through our users and print out information with something like ...
 ```
-for person in imc.people:
+for person in team.people:
     print "{0} ({1})".format(person["full-name"], person["email-address"])
 ```
 From here, you have all of the functionality in TeamWork at your fingertips assuming you can follow their API documentation and properly format your PUTs. To create a new user you would do something along these lines (add as much information as you would like):
@@ -21,14 +21,14 @@ From here, you have all of the functionality in TeamWork at your fingertips assu
 user = {"person": {"first-name": "Timothy",
                    "last-name":  "Flaspoehler",
                    "email-address": "tflaspoehler@gmail.com",}}
-imc.post("people.json", user)
+team.post("people.json", user)
 ```
 With a similar approach, it is easy to edit an existing user but you have to send the post request with the user ID.
 ```
 uid = 335457
 user = "people/{0}.json".format(uid)
 changes = {"person": {"first-name": "Tim"}}
-imc.put(user, changes)
+team.put(user, changes)
 ```
 This should be the same with adding and editing projects, tasks, etc.
 
