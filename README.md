@@ -5,6 +5,8 @@ The [TeamWork API](https://developer.teamwork.com/projects/introduction) ([https
 ## teamwork.py
 To connect to your TeamWork account using attached `teamwork.py` class you need the subdomain (for me it was "imcmanger") and an API key which can be found on the website under your profile. When the class is initialized it will read in account information, a list of people, and a list of projects. This is done by:
 ```
+from teamwork import *
+
 subdomain = "imcmanager"
 api_key = "enter you API-KEY here"
 imc = teamwork(subdomain, api_key)
