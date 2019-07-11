@@ -11,7 +11,7 @@ imc = teamwork(subdomain, api_key)
 ```
 This will print out the different `GET` calls that are made to get your account information. Now we can loop through our users and print out information with something like ...
 ```
-for person in amc.people:
+for person in imc.people:
     print "{0} ({1})".format(person["full-name"], person["email-address"])
 ```
 From here, you have all of the functionality in TeamWork at your fingertips assuming you can follow their API documentation and properly format your PUTs. To create a new user you would do something along these lines (add as much information as you would like):
